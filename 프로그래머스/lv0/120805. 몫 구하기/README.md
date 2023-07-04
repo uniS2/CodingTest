@@ -12,7 +12,7 @@
 
 ### 채점결과
 
-Empty
+주의사항! parseInt를 쓸 경우 bigInt 자료형을 사용할시 문제가 될 수 있으므로 Math.floor를 이용하여 처리
 
 ### 문제 설명
 
