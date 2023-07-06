@@ -10,9 +10,17 @@
 
 코딩테스트 연습 > 코딩테스트 입문
 
-### 채점결과
+### 코드 리뷰
+[Math.floor() 과 Math.trunc() 함수의 차이점]
+- 주어진 숫자의 소수부분을 제거한다는 점에서 두 함수는 차이점이 없어보이나 다음과 같은 특이사항이 있다.
+- Math.floor() 함수는 입력값 이하(숫자형 형 변환) 의 가장 큰 정수값을 반환한다. ```Math.floor(-45.05); // -46```
+- Math.trunc() 함수는 입력값(숫자형 형 변환) 의 정수부분만을 반환한다. 즉, 주어진 값의 양수, 음수 여부에 상관없이 소수점 이하 우측부분을 제거한다. ```Math.floor(-45.05); // -45``` 
 
-Empty
+[참고 자료] : [Math.floor()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), [Math.trunc()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)  
+
+[추가 개념] : [Math.ceil(): 입력값보다 크거나 같은 숫자 중 가장 작은 숫자를 정수로 반환](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil),
+[Math.round(): 입력값을 반올림한 수와 가장 가까운 정수 값을 반환](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
+
 
 ### 문제 설명
 
