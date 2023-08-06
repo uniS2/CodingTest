@@ -10,9 +10,29 @@
 
 코딩테스트 연습 > 코딩테스트 입문
 
-### 채점결과
+---
 
-Empty
+### 코드리뷰
+#### 처음 풀이
+```js
+// 처음 풀이
+function solution(message) {
+    return message.split('').length * 2;
+}
+```
+- 처음 풀이 방식 : `split` 메서드 이용하여 배열로 반환 => `length` 메서드 이용하여 원하는 값 구하기
+- `String.length` : 문자열의 길이를 반환하는 메서드.
+- 따라서 `split` 메서드를 사용하여 배열로 반환후 길이를 반환할 필요없이 바로 `length` 메서드를 적용한다.
+
+#### 최종 풀이
+```
+// 최종 풀이
+function solution(message) {
+    return message.length * 2;
+}
+```
+
+---
 
 ### 문제 설명
 
