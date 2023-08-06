@@ -1,11 +1,7 @@
 function solution(n) {
-    const arr_input = String(n).split('');
-    let arr_result = [];
+    const arr_input = String(n);
+    const arr_result = arr_input.split('').sort((a,b) => (b-a)).join('');
     
-    arr_input.forEach((item) => {
-        arr_result.push(item);
-    })
+    return +arr_result;
     
-    arr_result = +arr_result.sort((a,b) => b-a).join('');
-    return arr_result;
 }
