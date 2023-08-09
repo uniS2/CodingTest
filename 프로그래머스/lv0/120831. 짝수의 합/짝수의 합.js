@@ -5,5 +5,5 @@ function solution(n) {
     }
     return sum;
     
-    // 수열 방식
+    // 실행속도: for문 > 수열 방식
 }
