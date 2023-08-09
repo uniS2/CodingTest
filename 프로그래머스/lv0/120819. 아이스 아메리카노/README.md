@@ -10,9 +10,32 @@
 
 코딩테스트 연습 > 코딩테스트 입문
 
-### 채점결과
+---
 
-Empty
+### 코드리뷰
+#### 처음 풀이
+```js
+// 처음 풀이
+function solution(money) {
+    let arr = [Math.floor(money / 5500), Math.floor(money % 5500)];
+    return arr;
+}
+```
+- 처음 풀이 방식 : Math.floor() 를 아메리카노 잔 수와 거스름돈 모두에 적용하였다.
+- 허나, 거스름돈은 항상 정수처리 되기 때문에 Math.floor() 처리를 다시 해줄 필요가 없다.
+- 따라서, 밑과 같이 풀이를 바꾸어 준다. 필요한 곳에만 조건 또는 메서드를 적용하자!
+
+#### 최종 풀이
+```js
+// 최종 풀이
+function solution(money) {
+    let arr = [Math.floor(money / 5500), money % 5500];
+    return arr;
+}
+```
+
+---
+
 
 ### 문제 설명
 
