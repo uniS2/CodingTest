@@ -1,3 +1,4 @@
 function solution(myString) {
-    return myString.includes('a') ? myString.toLowerCase().replaceAll('a', 'A') : myString.toLowerCase().replaceAll('a', 'A');
+    // 동일
+    return myString.toLowerCase().replaceAll('a', 'A');
 }
