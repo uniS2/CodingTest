@@ -38,8 +38,7 @@ function solution(my_strings, parts) {
 return parts
   .map(([s, e], i) => {
     return my_strings[i].slice(s, e + 1);
-  })
-  .join("");
+  }).join("");
 ```
 
 - 풀이 방식: map 메서드를 사용하여 이차원 정수 배열의 요소와 인덱스를 사용한다.
