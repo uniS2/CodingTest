@@ -1,4 +1,4 @@
-# [unrated] 덧셈식 출력하기 - 181947 
+# [Lv.0] 덧셈식 출력하기 - 181947 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181947) 
 
@@ -13,6 +13,28 @@
 ### 채점결과
 
 정확성: 100.0<br/>합계: 100.0 / 100.0
+
+---
+
+### 코드리뷰
+#### 처음 풀이
+```js
+input = line.split(' ');
+console.log(`${input[0]} + ${input[1]} = ${Number(input[0]) + Number(input[1])}`);
+```
+- 처음 풀이 방식: 들어온 input 값을 배열 원본 형태 그대로 사용하였다.
+- 문제점: 식을 한눈에 알아보기 힘들다.
+
+#### 최종 풀이
+```js
+[a, b] = line.split(' ');
+console.log(`${a} + ${b} = ${Number(a) + Number(b)}`);
+```
+- 수정 방식: 배열의 구조 분해 할당을 이용해 식을 한눈에 알아볼 수 있도록 하였다.
+- 참고 자료: [구조분해할당/배열구조분해/선언에서분리한할당|MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%EC%84%A0%EC%96%B8%EC%97%90%EC%84%9C_%EB%B6%84%EB%A6%AC%ED%95%9C_%ED%95%A0%EB%8B%B9)
+---
+
+
 
 ### 문제 설명
 
