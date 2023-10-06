@@ -1,6 +1,6 @@
-# [unrated] 부분 문자열 이어 붙여 문자열 만들기 - 181911 
+# [unrated] 부분 문자열 이어 붙여 문자열 만들기 - 181911
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181911) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181911)
 
 ### 성능 요약
 
@@ -13,6 +13,38 @@
 ### 채점결과
 
 정확성: 100.0<br/>합계: 100.0 / 100.0
+
+---
+
+### 코드리뷰
+
+#### 나의 풀이
+
+```js
+function solution(my_strings, parts) {
+  let result = [];
+  for (let i = 0; i < my_strings.length; i++) {
+    result.push(my_strings[i].slice(parts[i][0], parts[i][1] + 1));
+  }
+  return result.join("");
+}
+```
+
+- 나의 풀이 방식: for 문을 이용하여 식을 돌린 후 배열에 push 메서드를 사용하였다.
+
+#### 다른 사람 풀이
+
+```js
+return parts
+  .map(([s, e], i) => {
+    return my_strings[i].slice(s, e + 1);
+  })
+  .join("");
+```
+
+- 풀이 방식: map 메서드를 사용하여 이차원 정수 배열의 요소와 인덱스를 사용한다.
+
+---
 
 ### 문제 설명
 
@@ -93,6 +125,5 @@
       </table>
 <p>각 부분 문자열을 순서대로 이어 붙인 문자열은 "programmers"입니다. 따라서 "programmers"를 return 합니다.</p></li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
