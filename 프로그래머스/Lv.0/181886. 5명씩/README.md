@@ -1,6 +1,6 @@
-# [level unrated] 5명씩 - 181886 
+# [level unrated] 5명씩 - 181886
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181886) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181886)
 
 ### 성능 요약
 
@@ -13,6 +13,30 @@
 ### 채점결과
 
 정확성: 100.0<br/>합계: 100.0 / 100.0
+
+---
+
+### 코드리뷰
+
+#### 나의 풀이
+
+```js
+function solution(names) {
+  return names.filter((n, i) => i % 5 === 0);
+}
+```
+
+- 풀이 방식: `filter` 메서드를 통해 5의 배수를 가지는 사람의 이름만 출력하도록 한다.
+
+#### 더 나은 풀이
+
+```js
+return names.filter((n, i) => !(i % 5));
+```
+
+- 설명: 식 `i % 5`는 0 또는 1 ~ 4로 결과값이 나뉘어져 true 또는 false로 반환되므로 일치연산자(===)를 생략한다.
+
+---
 
 ### 제출 일자
 
@@ -56,6 +80,5 @@
 <ul>
 <li>앞에서부터 5명씩 두 그룹으로 묶을 수 있습니다. ["nami", "ahri", "jayce", "garen", "ivern"], ["vex", "jinx"] 이 두 그룹에서 가장 앞에 서있는 사람들의 이름을 담은 리스트인 ["nami", "vex"]를 return합니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
