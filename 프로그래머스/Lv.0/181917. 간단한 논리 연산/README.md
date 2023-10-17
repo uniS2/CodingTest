@@ -1,6 +1,6 @@
-# [level unrated] 간단한 논리 연산 - 181917 
+# [level 0] 간단한 논리 연산 - 181917
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181917) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181917)
 
 ### 성능 요약
 
@@ -13,6 +13,33 @@
 ### 채점결과
 
 정확성: 100.0<br/>합계: 100.0 / 100.0
+
+---
+
+### 코드리뷰
+
+#### 나의 풀이
+
+```js
+function solution(x1, x2, x3, x4) {
+  const res1 = x1 === false && x2 === false ? false : true;
+  const res2 = x3 === false && x4 === false ? false : true;
+  return res1 === false || res2 === false ? false : true;
+}
+```
+
+- 처음 풀이 방식: 논리 연산자의 특징을 활용하지 않아 식이 깔끔하지 않다. 또한 논리 연산자에 대해 모르는 사람처럼 보인다.
+
+#### 다른 사람 풀이
+
+```js
+return (x1 || x2) && (x3 || x4);
+```
+
+- 풀이 설명: 논리 연산자의 특징을 활용하여 값을 반환할 수 있도록 한다.
+- [논리 연산자 | Info](https://ko.javascript.info/logical-operators) : OR 연산자 `T||`, AND 연산자 `F&&`
+
+---
 
 ### 제출 일자
 
@@ -117,6 +144,5 @@
 </tbody>
       </table></li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
