@@ -1,6 +1,6 @@
-# [level unrated] 문자열 묶기 - 181855 
+# [level unrated] 문자열 묶기 - 181855
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181855) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181855)
 
 ### 성능 요약
 
@@ -13,6 +13,34 @@
 ### 채점결과
 
 정확성: 100.0<br/>합계: 100.0 / 100.0
+
+---
+
+### 코드리뷰
+
+#### 나의 풀이
+
+```js
+function solution(strArr) {
+  arr = new Array(strArr.length).fill(0);
+  for (let i of strArr) {
+    arr[i.length] += 1;
+  }
+  return +arr.sort().slice(-1);
+}
+```
+
+- 처음 풀이 방식: 주어진 문자 배열의 길이 만큼 0으로 채워진 배열을 만든 후, for 문을 통해 값을 도출하였다.
+
+#### 보완 및 주의점
+
+```js
+return Math.max(...arr);
+```
+
+- 보완: `Math.max()` 내장 객체-메서드 사용시 배열 형태가 아님 spread 문법을 통해 개별 요소를 분리하여 값을 구할 수 있도록 하자!
+
+---
 
 ### 제출 일자
 
@@ -86,6 +114,5 @@
 <ul>
 <li>개수의 최댓값은 2이므로 2를 return 합니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
