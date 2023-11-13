@@ -1,6 +1,6 @@
-# [level unrated] 직사각형 넓이 구하기 - 120860 
+# [Lv.0] 직사각형 넓이 구하기 - 120860
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120860#qna) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120860#qna)
 
 ### 성능 요약
 
@@ -13,6 +13,30 @@
 ### 채점결과
 
 정확성: 100.0<br/>합계: 100.0 / 100.0
+
+---
+
+### 코드리뷰
+
+#### 문제 해결
+
+```js
+function solution(dots) {
+  dots.sort((a, b) => a[0] - b[0]);
+  const [one, two, three] = dots;
+  return Math.abs((one[0] - three[0]) * (one[1] - two[1]));
+}
+```
+
+- 처음에는 dots 배열을 one, two, three, four로 배열 구조 분해 할당하여 index 1 값을 모두 찾아내어 다음과 같이 계산하면 된다 생각하였다.
+  `return Math.abs((one[1] - two[1]) * (three[1] - four[1]));`
+
+  <br>
+
+- 허나 넓이는 가로 _ 세로 이기 때문에 한 번은 index 0 을, 한 번은 index 1을 서로 계산한 값을 반환해주어야 한다. <br> 따라서, 최종 풀이는 다음과 같다.
+  `return Math.abs((one[0] - three[0]) _ (one[1] - two[1]));`
+
+---
 
 ### 제출 일자
 
@@ -67,6 +91,5 @@
 <ul>
 <li>좌표 [[-1, -1], [1, 1], [1, -1], [-1, 1]]를 꼭짓점으로 갖는 직사각형의 가로, 세로 길이는 각각 2, 2이므로 직사각형의 넓이는 2 x 2 = 4입니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
