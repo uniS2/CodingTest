@@ -1,4 +1,4 @@
-# [level unrated] 특별한 이차원 배열 2 - 181831 
+# [level 0] 특별한 이차원 배열 2 - 181831 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181831) 
 
@@ -13,6 +13,7 @@
 ### 채점결과
 
 정확성: 100.0<br/>합계: 100.0 / 100.0
+공부사항: `every` 메서드에 대해 알아보자!
 
 ### 제출 일자
 
