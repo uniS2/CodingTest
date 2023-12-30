@@ -1,6 +1,6 @@
-# [level unrated] 등차수열의 특정한 항만 더하기 - 181931 
+# [level 0] 등차수열의 특정한 항만 더하기 - 181931
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181931) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181931)
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 12월 4일 22:38:35
+2023년 12월 28일 22:38:35
 
 ### 문제 설명
 
@@ -137,6 +137,5 @@
       </table>
 <p>따라서 4항만 true이므로 10을 return 합니다.</p></li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
