@@ -1,6 +1,6 @@
-# [level unrated] 로그인 성공? - 120883 
+# [level 0] 로그인 성공? - 120883
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120883) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120883)
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 12월 6일 23:1:3
+2023년 12월 30일 23:1:3
 
 ### 문제 설명
 
@@ -92,6 +92,5 @@
 <ul>
 <li><code>db</code>에 아이디가 맞는 계정이 없으므로 "fail"을 return합니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
