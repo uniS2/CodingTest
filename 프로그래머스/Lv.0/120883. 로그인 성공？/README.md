@@ -18,6 +18,50 @@
 
 2023년 12월 30일 23:1:3
 
+<br />
+
+### 코드 리뷰
+
+#### 처음 풀이
+
+- 중첩된 `if` 문으로 의해 로직을 한눈에 파악하기 어렵습니다.
+
+```js
+function solution(id_pw, db) {
+  for ([key, value] of db) {
+    if (id_pw[0] === key) {
+      if (id_pw[1] === value) {
+        return "login";
+      } else {
+        return "wrong pw";
+      }
+    }
+  }
+  return "fail";
+}
+```
+
+#### 배열 구조 분해 할당, `&&` 연산자 활용한 풀이
+
+- `&&` 연산자를 사용함으로서 로직을 파악하기 쉽습니다.
+- 배열 구조 분해 할당을 사용하여 `[id, pw]`으로 나타냄으로서 기존 `id_pw[0]`, `id_pw[1]` 보다 변수가 어떤 의미를 가지는지 파악하기 쉽습니다.
+- `for...of` 문 안의 `key`, `value` 또한 변수명을 `[dbId, dbPw]`로 지어 파악하기 쉽다는 장점이 있습니다.
+
+```js
+function solution(id_pw, db) {
+  const [id, pw] = id_pw;
+
+  for (const [dbId, dbPw] of db) {
+    if (id === dbId && pw === dbPw) return "login";
+    else if (id === dbId && pw !== dbPw) return "wrong pw";
+  }
+
+  return "fail";
+}
+```
+
+<br />
+
 ### 문제 설명
 
 <p>머쓱이는 프로그래머스에 로그인하려고 합니다. 머쓱이가 입력한 아이디와 패스워드가 담긴 배열 <code>id_pw</code>와 회원들의 정보가 담긴 2차원 배열 <code>db</code>가 주어질 때, 다음과 같이 로그인 성공, 실패에 따른 메시지를 return하도록 solution 함수를 완성해주세요.</p>
