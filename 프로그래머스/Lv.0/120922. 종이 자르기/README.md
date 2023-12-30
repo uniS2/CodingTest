@@ -1,6 +1,6 @@
-# [level unrated] 종이 자르기 - 120922 
+# [level 0] 종이 자르기 - 120922
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120922) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120922)
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 12월 6일 22:2:38
+2023년 12월 30일 22:2:38
 
 ### 문제 설명
 
@@ -83,6 +83,5 @@
 <ul>
 <li>이미 1 * 1 크기이므로 0을 return 합니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
