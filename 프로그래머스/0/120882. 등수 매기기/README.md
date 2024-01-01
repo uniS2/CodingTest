@@ -1,6 +1,6 @@
-# [level unrated] 등수 매기기 - 120882 
+# [level 0] 등수 매기기 - 120882
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120882) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120882)
 
 ### 성능 요약
 
@@ -17,6 +17,38 @@
 ### 제출 일자
 
 2024년 1월 1일 19:24:24
+
+<br />
+
+### 코드 리뷰
+
+- `findIndex` 메서드를 이용한 풀이
+- `indexOf` 메서드를 이용하면 어떨까?
+
+#### `findIndex` 메서드를 이용한 처음 풀이
+
+```js
+function solution(score) {
+  const arr = score.map(([a, b]) => (a + b) / 2);
+  const arr_sort = [...arr].sort((a, b) => b - a);
+
+  return arr.map((i) => arr_sort.findIndex((a) => a === i) + 1);
+}
+```
+
+### `indexOf` 메서드를 이용한 풀이
+
+```js
+function solution(score) {
+  // ...
+  return arr.map((i) => arr_sort.indexOf(i) + 1);
+}
+```
+
+- `indexOf` 메서드는 조건을 입력하지 않아도 해당되는 값의 인덱스를 반환하여 주기 때문에 연산이 적다.
+- 대상이 객체이거나 특정 대상의 값으로 찾는 경우에만 `findIndex` 메서드를 애용하도록 하자. <br> [참고자료: 배열 내장 함수 정리(indexOf, findIndex, find)](https://developing-move.tistory.com/11)
+
+<br />
 
 ### 문제 설명
 
@@ -68,6 +100,5 @@
 <li>평균은 각각 75, 75, 40, 95, 95, 100, 20 이므로 [4, 4, 6, 2, 2, 1, 7] 을 return합니다.</li>
 <li>공동 2등이 두 명, 공동 4등이 2명 이므로 3등과 5등은 없습니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
