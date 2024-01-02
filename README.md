@@ -1,6 +1,6 @@
 # CodingTest (JavaSript)
 
-Study at least one coding test question every day.
+Study at least one coding test question every day. <br>
 This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
 
 # 바로가기
