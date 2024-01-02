@@ -4,7 +4,56 @@
 
 ### 성능 요약
 
-메모리: 33.7 MB, 시간: 0.05 ms
+- [나의 풀이] 메모리: 33.7 MB, 시간: 0.05 ms
+- [`Set` 이용한 풀이] 메모리: 33.5 MB, 시간: 0.04 ms
+
+### 코드 리뷰
+
+#### 나의 풀이
+
+```js
+function solution(a, b, c) {
+  const sum = a + b + c;
+  const powTwo = Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2);
+  const powThree = Math.pow(a, 3) + Math.pow(b, 3) + Math.pow(c, 3);
+
+  if (a === b && b === c) return sum * powTwo * powThree;
+  else if (a !== b && b !== c && c !== a) return sum;
+  else return sum * powTwo;
+}
+```
+
+- `sum`, `powTwo`, `powThree` 변수 선언을 통해 연산을 처리한다.
+- `pow` 메서드를 이용하였다.
+- `a === b && b === c`, `a !== b && b !== c && c !== a` 로 조건을 직접 작성하였다.
+
+#### `Set`을 이용한 다른 풀이
+
+```js
+function solution(a, b, c) {
+  const equal = new Set([a, b, c]).size;
+
+  if (equal === 3) return a + b + c;
+  else if (equal === 2) return (a + b + c) * (a ** 2 + b ** 2 + c ** 2);
+  else
+    return (
+      (a + b + c) * (a ** 2 + b ** 2 + c ** 2) * (a ** 3 + b ** 3 + c ** 3)
+    );
+}
+```
+
+- 변수를 선언하지 않아 조건에 해당되는 연산만 처리할 수 있다.
+- 메서드가 아닌 `**` 연산을 통해 간단하게 처리할 수 있다.
+- `Set` 자료구조와 `size` 접근자 속성을 이용하여 조건을 간결하게 처리할 수 있다. <br> `Set`의 경우 중복되는 값을 추가하지 않기 때문에 Set 객체의 원소 수를 반환해주는 `size` 접근자 속성을 이용하면 다음과 같은 결과값을 반환한다.
+  ![Set과 접근자 속성 size](Set.png)
+
+#### 결론
+
+- 변수 선언과 메서드는 남용하지 않는다.
+- ES6에 `Set` 자료구조가 도입된 만큼 배열과 차이점을 이해하고 해결할 수 있는 부분에서는 사용해보자!
+- 참고자료: [Set.prototype.size](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/size), [자바스크립트 세트(Set) 완벽 가이드](https://www.daleseo.com/js-set/)
+
+<br/>
 
 ### 구분
 
