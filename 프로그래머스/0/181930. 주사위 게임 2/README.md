@@ -1,10 +1,10 @@
-# [level unrated] 주사위 게임 2 - 181930 
+# [level 0] 주사위 게임 2 - 181930
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181930) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181930)
 
 ### 성능 요약
 
-메모리: 33.6 MB, 시간: 0.08 ms
+메모리: 33.7 MB, 시간: 0.05 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 2일 11:49:27
+2024년 1월 2일 11:56:46
 
 ### 문제 설명
 
@@ -90,6 +90,5 @@
 <ul>
 <li>예제 3번에서 세 주사위 숫자가 모두 같으므로 (4 + 4 + 4) × (4<sup>2</sup> + 4<sup>2</sup> + 4<sup>2</sup> ) × (4<sup>3</sup> + 4<sup>3</sup> + 4<sup>3</sup> ) = 12 × 48 × 192 = 110,592점을 얻습니다. 따라서 110592를 return 합니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
