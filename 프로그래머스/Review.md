@@ -19,6 +19,8 @@ These are the coding test Lv.0 and Lv.1 questions solved in 2023.
 
 - `Math.max(...arr);`: spread 연산자 통해 개별 요소로 분리 후 반환하는 것 주의
 
+<br>
+
 ## 배열
 
 - 배열 형태로 들어온 input 값 -> 구조 분해 할당 사용하기
