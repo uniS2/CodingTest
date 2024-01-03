@@ -1,6 +1,6 @@
-# [level unrated] 배열 만들기 3 - 181895 
+# [level 0] 배열 만들기 3 - 181895
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181895) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181895)
 
 ### 성능 요약
 
@@ -17,6 +17,43 @@
 ### 제출 일자
 
 2024년 1월 4일 0:43:57
+
+<br>
+
+### 코드 리뷰
+
+#### 나의 풀이
+
+```js
+function solution(arr, intervals) {
+  return intervals.map(([a, b]) => arr.slice(a, b + 1)).flat();
+}
+```
+
+- 메서드 `slice`, `map`, `flat`을 이용하여 풀이하였습니다.
+- 성능 시간이 **0.62 ms** 로 여러 메서드 사용으로 인해 오래 걸립니다.
+
+<br>
+
+#### 🆕 배열 구조 분해 할당을 이용한 다른 풀이
+
+```js
+function solution(arr, intervals) {
+  const [[a1, b1], [a2, b2]] = intervals;
+  return [...arr.slice(a1, b1 + 1), ...arr.slice(a2, b2 + 1)];
+}
+```
+
+- 메서드 없이 **배열 구조 분해 할당** 만으로 연산하였습니다.
+- 성능 시간이 **0.47 ms** 로 줄어들어 더 좋아졌음을 확인하였습니다.
+
+<br>
+
+✨ 결론
+
+- 구조 분해 할당을 애용하자!
+
+<br>
 
 ### 문제 설명
 
@@ -68,6 +105,5 @@
 <li>두 번째 구간에 해당하는 배열은 [1, 2, 3, 4, 5] 입니다.</li>
 <li>따라서 이 두 배열을 앞뒤로 붙인 배열인 [2, 3, 4, 1, 2, 3, 4, 5]를 return 합니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
