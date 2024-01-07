@@ -1,6 +1,6 @@
-# [level unrated] 수열과 구간 쿼리 3 - 181924 
+# [level 0] 수열과 구간 쿼리 3 - 181924
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181924) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181924)
 
 ### 성능 요약
 
@@ -16,7 +16,50 @@
 
 ### 제출 일자
 
-2024년 1월 0일 14:26:28
+2024년 1월 7일 14:26:28
+
+<br/>
+
+### 코드리뷰
+
+#### 🤔 나의 풀이
+
+```js
+function solution(arr, queries) {
+  queries.forEach(([i, j]) => {
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+  });
+  return arr;
+}
+```
+
+- 변수 `temp` 선언을 통한 교환
+
+<br>
+
+#### 🆕 배열 구조 분해 할당 이용한 다른 사람 풀이 😲
+
+```js
+function solution(arr, queries) {
+  queries.forEach(([i, j]) => {
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  });
+  return arr;
+}
+```
+
+- `[arr[i], arr[j]] = [arr[j], arr[i]]` 문을 통한 교환
+- 배열 구조 분해 할당... 이게 되네...?
+
+<br>
+
+✨ 결론
+
+- 배열에서는 변수 선언 없이도 배열 구조 분해 할당을 이용해 값을 교환할 수 있다!
+
+<br/>
 
 ### 문제 설명
 
@@ -91,6 +134,5 @@
 <ul>
 <li>따라서 [3, 4, 1, 0, 2]를 return 합니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
