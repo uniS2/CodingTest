@@ -1,6 +1,6 @@
-# [level unrated] 1로 만들기 - 181880 
+# [level 0] 1로 만들기 - 181880
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181880) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181880)
 
 ### 성능 요약
 
@@ -16,7 +16,59 @@
 
 ### 제출 일자
 
-2024년 1월 0일 12:53:58
+2024년 1월 07일 12:53:58
+
+<br/>
+
+### 코드리뷰
+
+#### 🤔 나의 풀이
+
+```js
+function solution(num_list) {
+  let answer = 0;
+
+  num_list.forEach((num) => {
+    while (num > 1) {
+      if (num % 2) {
+        num = (num - 1) / 2;
+        answer++;
+      } else {
+        num /= 2;
+        answer++;
+      }
+    }
+  });
+
+  return answer;
+}
+```
+
+- `forEach` 반복문을 통해 num_list의 원소를 돌린 후 내부 `while` 문을 통해 num이 1이 되기 전까지 반복합니다.
+- `answer` 변수를 통해 값을 합한 후 반환해줍니다.
+
+<br>
+
+#### 🆕 다른 사람 풀이 - `map`, `reduce` 😲
+
+```js
+function solution(num_list) {
+  return num_list.map((v) => v.toString(2).length - 1).reduce((a, c) => a + c);
+}
+```
+
+1. `toString(2)`를 통해 2진수로 변환해줍니다.
+2. `length` 메서드를 통해 2진수의 길이를 더한 후 1을 빼줍니다. (1이 되면 연산을 중단하므로)
+3. 나온 값은 `reduce` 메서드를 통해 누적값을 더해 반환해줍니다.
+
+<br/>
+
+✨ 결론
+
+- 퓰이 방식은 다양하고 생각보다 쉬운 방법으로 풀 수 있다.
+- 이런 풀이 방식도 있구나 알아두고 다음에는 사용하자!! 아자!!
+
+<br/>
 
 ### 문제 설명
 
@@ -66,6 +118,5 @@
 <ul>
 <li>12는 3번, 4는 2번, 15는 3번, 1은 0번, 14는 3번의 연산이 필요하기 때문에 총 11번의 연산이 필요합니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
