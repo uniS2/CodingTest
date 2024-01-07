@@ -5,4 +5,4 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 
 ## 🔗 바로가기
 
-- [프로그래머스 (JavaScript)](/프로그래머스)
+- [프로그래머스 (JavaScript)](/프로그래머스/README.md)
