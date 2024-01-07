@@ -1,6 +1,6 @@
-# [level unrated] 수열과 구간 쿼리 1 - 181883 
+# [level 0] 수열과 구간 쿼리 1 - 181883
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181883) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181883)
 
 ### 성능 요약
 
@@ -16,7 +16,53 @@
 
 ### 제출 일자
 
-2024년 1월 0일 13:39:6
+2024년 1월 7일 13:39:6
+
+<br/>
+
+### 코드리뷰
+
+#### 🤔 나의 풀이
+
+```js
+function solution(arr, queries) {
+  queries.forEach(([s, e]) => {
+    arr = arr.map((v, i) => {
+      if (i >= s && i <= e) return v + 1;
+      else return v;
+    });
+  });
+  return arr;
+}
+```
+
+- `forEach` 내부에 `map` 메서드를 이용하여 조건을 통해 반환해준다.
+
+<br>
+
+#### 🆕 다른 사람 풀이: `while` 반복문과 후위 증감 연산자 `++` 이용
+
+```js
+function solution(arr, queries) {
+  queries.forEach(([v, e]) => {
+    while (v <= e) arr[v++]++;
+  });
+  return arr;
+}
+```
+
+1. `forEach` 내부에 `while` 반복문을 이용한다.
+2. e보다 v가 작을 경우 `arr[v]`의 값에 1을 더한다. <br/> 이때, `v`에 후위 증감 연산자가 사용되어 연산이 완료되면 `v`값이 1 올라간다.
+3. `v + 1` 과 `e`를 비교하여 반복문을 처리하며, 위 단계를 계속 반복한다.
+
+<br/>
+
+✨ 결론
+
+- 메서드를 하나만 이용하며, if 문을 통해 조건을 나누었을 때보다 간결하다.
+- 후위 증감 연산자와 `arr[v++]++` 통해서 배열 원소값을 더 할 수 있다는 점을 기억하자!
+
+<br/>
 
 ### 문제 설명
 
@@ -101,6 +147,5 @@
 <ul>
 <li>따라서 [1, 3, 4, 4, 4]를 return 합니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
