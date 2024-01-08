@@ -1,10 +1,10 @@
-# [level unrated] 글자 지우기 - 181900 
+# [level 0] 글자 지우기 - 181900
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181900) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181900)
 
 ### 성능 요약
 
-메모리: 33.4 MB, 시간: 0.07 ms
+메모리: 33.5 MB, 시간: 0.06 ms
 
 ### 구분
 
@@ -16,7 +16,35 @@
 
 ### 제출 일자
 
-2024년 1월 2일 0:10:42
+2024년 1월 9일 0:17:36
+
+<br />
+
+### 코드리뷰
+
+#### 🤔 나의 풀이
+
+```js
+function solution(my_string, indices) {
+  return [...my_string].filter((v, i) => !indices.includes(i)).join("");
+}
+```
+
+<br />
+
+#### 🆕 다른 풀이
+
+```js
+let answer = "";
+for (let i = 0; i < my_string.length; i++) {
+  if (!indices.includes(i)) answer += my_string[i];
+}
+return answer;
+```
+
+- `for` 문과 문자열을 활용한 풀이
+
+<br />
 
 ### 문제 설명
 
@@ -108,6 +136,5 @@
       </table>
 <p><code>indices</code>에 있는 인덱스의 글자들을 지우고 이어붙이면 "programmers"가 되므로 이를 return 합니다.</p></li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
