@@ -1,6 +1,6 @@
-# [level unrated] 문자열 겹쳐쓰기 - 181943 
+# [level 0] 문자열 겹쳐쓰기 - 181943
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181943) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181943)
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 2일 23:5:39
+2024년 1월 9일 23:5:39
 
 ### 문제 설명
 
@@ -72,6 +72,5 @@
 <ul>
 <li>예제 2번의 <code>my_string</code>에서 인덱스 7부터 <code>overwrite_string</code>의 길이만큼에 해당하는 부분은 "29b8UYP"이고 이를 "merS123"로 바꾼 "ProgrammerS123"를 return 합니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
