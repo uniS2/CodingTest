@@ -1,6 +1,6 @@
-# [level Lv.0] qr code - 181903 
+# [level 0] qr code - 181903
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181903) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181903)
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 4일 22:16:12
+2024년 1월 11일 22:16:12
 
 ### 문제 설명
 
@@ -181,6 +181,5 @@
       </table>
 <p><code>q</code>로 나눈 나머지가 1인 인덱스의 문자들을 앞에서부터 순서대로 이어 붙이면 "programmers"가 되므로 이를 return 합니다.</p></li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges

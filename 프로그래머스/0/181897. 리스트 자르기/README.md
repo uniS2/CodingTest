@@ -1,6 +1,6 @@
-# [level Lv.0] 리스트 자르기 - 181897 
+# [level 0] 리스트 자르기 - 181897
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181897) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181897)
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 4일 22:28:28
+2024년 1월 11일 22:28:28
 
 ### 문제 설명
 
@@ -88,6 +88,5 @@
 <ul>
 <li>[1, 2, 3, 4, 5, 6, 7, 8, 9]에서 1번 인덱스부터 5번 인덱스까지 2개 간격으로 자른 리스트는 [2, 4, 6]입니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
