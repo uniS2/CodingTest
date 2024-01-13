@@ -18,6 +18,49 @@
 
 2024년 1월 13일 21:41:9
 
+<br />
+
+### 코드리뷰
+
+#### 😃 나의 풀이
+
+```js
+const readline = require("readline"); // Node.js 표준 입력/출력 모듈
+const rl = readline.createInterface({
+  // readline 인터페이스를 생성
+  input: process.stdin,
+  output: process.stdout,
+});
+
+let input = [];
+
+rl.on("line", function (line) {
+  //  사용자가 한 줄을 입력하고 엔터를 칠 때마다 이 함수가 호출
+  input = line;
+}).on("close", function () {
+  // 사용자가 입력을 종료(ctrl+D 또는 ctrl+C)하면 이 함수가 호출
+  console.log(input);
+});
+```
+
+<br>
+
+#### ✨ 다른 출력 방식
+
+```js
+const readline = require("readline");
+const rl = readline
+  .createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  })
+  .on("line", console.log); // 사용자가 한 줄을 입력하고 엔터를 칠 때마다 이 함수가 호출됩니다. 이 함수에서는 사용자가 입력한 내용을 즉시 콘솔에 출력
+```
+
+- `.on("line", console.log)` 통해 바로 출력할 수 있다.
+
+<br />
+
 ### 문제 설명
 
 <p>문자열 <code>str</code>이 주어질 때, <code>str</code>을 출력하는 코드를 작성해 보세요.</p>
