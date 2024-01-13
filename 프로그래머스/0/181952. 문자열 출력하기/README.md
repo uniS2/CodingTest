@@ -1,6 +1,6 @@
-# [level Lv.0] 문자열 출력하기 - 181952 
+# [level 0] 문자열 출력하기 - 181952
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181952) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181952)
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 6일 21:41:9
+2024년 1월 13일 21:41:9
 
 ### 문제 설명
 
