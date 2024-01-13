@@ -18,6 +18,44 @@
 
 2024년 1월 13일 20:57:16
 
+<br />
+
+### 코드리뷰
+
+#### 🤔 나의 풀이
+
+```js
+function solution(common) {
+  if (common[2] === 2 * common[1] - common[0])
+    return common[0] + common.length * (common[1] - common[0]);
+  else return common[0] * Math.pow(common[1] / common[0], common.length);
+}
+```
+
+- if 조건문을 등차수열일 경우, 나머지 경우(등비수열)를 구한다.
+- `common.length`를 통해 마지막 원소를 계산한다.
+
+<br>
+
+#### 🆕 다른 사람 풀이
+
+```js
+function solution(common) {
+  if (common[2] === 2 * common[1] - common[0])
+    return common.pop() + common[1] - common[0];
+  else return (common.pop() * common[1]) / common[0];
+}
+```
+
+- 메서드 `pop`을 통해 마지막 원소에서 등차 또는 등비 d를 계산해준다.
+- 내 풀이보다 계산이 복잡하지 않다.
+
+✨ 결론
+
+- 등차수열 또는 등비수열의 값을 구할 경우 메서드 `pop`을 활용하자!
+
+<br />
+
 ### 문제 설명
 
 <p>등차수열 혹은 등비수열 <code>common</code>이 매개변수로 주어질 때, 마지막 원소 다음으로 올 숫자를 return 하도록 solution 함수를 완성해보세요.</p>
