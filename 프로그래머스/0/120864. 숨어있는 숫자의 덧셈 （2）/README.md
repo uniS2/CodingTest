@@ -18,6 +18,37 @@
 
 2024년 1월 14일 2:16:4
 
+<br />
+
+### 코드리뷰
+
+#### 🤓 나의 풀이
+
+```js
+function solution(my_string) {
+  return my_string.split(/[A-Z, a-z]/g).reduce((a, b) => +a + +b, 0);
+}
+```
+
+- 정규 표현식을 이용하였다.
+
+<br>
+
+#### ✅ 정규표현식 다른 방식
+
+다음과 같이 나타낼 수도 있다.
+
+```js
+return my_string.split(/[A-z]/g).reduce((a, b) => +a + +b, 0);
+return my_string.split(/\+D/).reduce((a, b) => +a + +b, 0);
+```
+
+![정규표현식 Character](character-classes.png)
+
+- 참고: [Untitled 7qcoa](https://regexr.com/7qcoa)
+
+<br />
+
 ### 문제 설명
 
 <p>문자열 <code>my_string</code>이 매개변수로 주어집니다. <code>my_string</code>은 소문자, 대문자, 자연수로만 구성되어있습니다. <code>my_string</code>안의 자연수들의 합을 return하도록 solution 함수를 완성해주세요.</p>
