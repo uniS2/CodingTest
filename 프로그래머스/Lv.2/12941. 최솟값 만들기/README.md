@@ -1,6 +1,6 @@
-# [level Lv.2] 최솟값 만들기 - 12941 
+# [level Lv.2] 최솟값 만들기 - 12941
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12941) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12941)
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 0일 4:0:40
+2024년 1월 14일 4:0:40
 
 ### 문제 설명
 
@@ -70,6 +70,5 @@
 <p>입출력 예 #2<br>
 A에서 첫번째 숫자인 1,  B에서 두번째 숫자인 4를 뽑아 곱하여 더합니다. (누적된 값 : 4) 다음, A에서 두번째 숫자인 2, B에서 첫번째 숫자인 3을 뽑아 곱하여 더합니다. (누적된 값 : 4 + 6 = 10)<br>
 이 경우가 최소이므로 10을 return 합니다.</p>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
