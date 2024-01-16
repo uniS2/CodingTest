@@ -18,6 +18,72 @@
 
 2024년 1월 17일 0:23:35
 
+<br />
+
+### 코드리뷰
+
+#### 🤔 나의 풀이
+
+```js
+function solution(sizes) {
+  let result = [0, 0];
+  for (let [key, value] of sizes.map((s) => s.sort((a, b) => a - b))) {
+    if (!result[0] || result[0] < key) result[0] = key;
+    if (!result[1] || result[1] < value) result[1] = value;
+  }
+  return result[0] * result[1];
+}
+```
+
+- `for...of...` 반복문과 메서드 `sort`를 이용하여 조건에 맞는 값을 구해주었다.
+- 허나 코드 가독성이 좋지 않으며, 불필요한 `!result[0]`, `!result[1]` 코드가 있음을 확인하였다.
+
+<br>
+
+#### 🤓 정리한 풀이
+
+```js
+function solution(sizes) {
+  let result = [0, 0];
+  sizes = sizes.map((s) => s.sort((a, b) => a - b));
+  sizes.forEach(([w, h]) => {
+    if (result[0] < w) result[0] = w;
+    if (result[1] < h) result[1] = h;
+  });
+  return result[0] * result[1];
+}
+```
+
+- 메서드 `sort` 문을 따로 작성함으로서 가독성을 높였다.
+- `forEach` 문을 사용한 반복문을 사용하였으며 불필요한 조건을 제거해주었다.
+
+<br>
+
+#### 🆕 다른 사람 풀이
+
+```js
+function solution(sizes) {
+  const [hor, ver] = sizes.reduce(
+    ([w, h], [a, c]) => [
+      Math.max(w, Math.max(a, c)),
+      Math.max(h, Math.min(a, c)),
+    ],
+    [0, 0]
+  );
+  return hor * ver;
+}
+```
+
+- 메서드 `reduce`와 `Math.max`를 활용하여 값을 구해주었다.
+
+<br>
+
+#### ✨ 결론
+
+- 코드 작성시 불필요한 코드를 줄이고 가독성을 높이자!
+
+<br />
+
 ### 문제 설명
 
 <p>명함 지갑을 만드는 회사에서 지갑의 크기를 정하려고 합니다. 다양한 모양과 크기의 명함들을 모두 수납할 수 있으면서, 작아서 들고 다니기 편한 지갑을 만들어야 합니다. 이러한 요건을 만족하는 지갑을 만들기 위해 디자인팀은 모든 명함의 가로 길이와 세로 길이를 조사했습니다.</p>
