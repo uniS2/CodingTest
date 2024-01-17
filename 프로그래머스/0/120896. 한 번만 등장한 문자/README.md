@@ -14,6 +14,50 @@
 
 정확성: 100.0<br/>합계: 100.0 / 100.0
 
+<br/>
+
+### 코드리뷰
+
+#### 🤔 나의 풀이
+
+```js
+function solution(s) {
+  let obj = {};
+  let result = [];
+  [...s].forEach((s) => {
+    obj[s] = obj[s] == undefined ? 1 : obj[s] + 1;
+  });
+  for (let [key] of Object.entries(obj).filter(([a, b]) => b === 1)) {
+    result.push(key);
+  }
+  return result.length ? result.sort().join("") : "";
+}
+```
+
+- 객체를 사용하여 `entries` 메서드와 `filter` 메서드를 통해 일치하는 문자를 출력합니다.
+
+<br>
+
+#### 🆕 다른 사람 풀이
+
+```js
+function solution(s) {
+  let res = [];
+  for (let c of s) {
+    if (s.indexOf(c) === s.lastIndexOf(c)) res.push(c);
+  }
+  return res.sort().join("");
+}
+```
+
+- `indexOf` 메서드와 `lastIndexOf` 메서드를 활용하여 한 번만 등장하는 문자를 찾습니다.
+
+#### ✨ 결론
+
+- 한 번만 등장하는 문자를 활용할 경우 메서드 `indexOf` 와 `lastIndexOf`를 활용해보자!
+
+<br/>
+
 ### 제출 일자
 
 2024년 1월 17일 22:21:53
