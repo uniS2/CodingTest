@@ -1,6 +1,6 @@
-# [level 0] 문자열 밀기 - 120921 
+# [level 0] 문자열 밀기 - 120921
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120921) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120921)
 
 ### 성능 요약
 
@@ -16,7 +16,46 @@
 
 ### 제출 일자
 
-2024년 2월 4일 22:4:43
+2024년 2월 1일 22:4:43
+
+### 코드리뷰
+
+#### 🤓 나의 풀이
+
+```js
+function solution(A, B) {
+  let result = 0;
+  // let word = A;
+
+  for (let i = 0; i < A.length; i++) {
+    if (B == A) return result;
+    // word = A.slice(-1) + A.slice(0, -1);
+    A = A.slice(-1) + A.slice(0, -1);
+    result++;
+  }
+  return -1;
+}
+```
+
+**처음 풀이** <br/> 변수 word를 통해 오른쪽으로 한 칸씩 문자를 이동시켰지만 통과되지 않았다. 이유가 뭘까?
+
+- 🤔 **반례:** "abc" -> "bca", result: 2가 출력되어야 하나 변수 word 값만 바뀌고 매개변수 A 값은 동일해서 에러가 발생됨을 확인하였습니다.
+
+- 😀 매개변수 A의 값을 `A = A.slice(-1) + A.slice(0, -1);` 와 같이 변경하여 결과값을 구하기!
+
+#### 🆕 다른 사람 풀이
+
+```js
+let solution = (A, B) => (B + B).indexOf(A);
+```
+
+- 변수 B를 두 번 반복할 경우 오른쪽으로 밀렸을때의 경우를 반드시 포함하게 된다.
+- 따라서, 메서드 `indexOf`를 통해 밀어야 하는 최소 횟수를 구할 수 있다.
+
+#### ✨ 결론
+
+- 메서드 `slice`는 원본이 변경되지 않음에 주의하자.
+- `문자열 밀기` 유형 풀이시 문자열의 2배에서 `indexOf` 찾기
 
 ### 문제 설명
 
@@ -94,6 +133,5 @@
 <hr>
 
 <p>※ 공지 - 2023년 4월 24일 테스트케이스가 추가되었습니다. 기존에 제출한 코드가 통과하지 못할 수도 있습니다.</p>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
