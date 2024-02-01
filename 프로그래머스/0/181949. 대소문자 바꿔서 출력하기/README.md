@@ -1,6 +1,6 @@
-# [level 0] 대소문자 바꿔서 출력하기 - 181949 
+# [level 0] 대소문자 바꿔서 출력하기 - 181949
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181949) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181949)
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 2월 4일 21:3:40
+2024년 2월 1일 21:3:40
 
 ### 문제 설명
 
@@ -47,6 +47,5 @@
 <hr>
 
 <p>※2023년 05월 03일 제한사항이 수정되었습니다.</p>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
