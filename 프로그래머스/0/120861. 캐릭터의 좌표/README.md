@@ -1,6 +1,6 @@
-# [level 0] 캐릭터의 좌표 - 120861 
+# [level 0] 캐릭터의 좌표 - 120861
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120861) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120861)
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 2월 6일 0:38:20
+2024년 2월 3일 0:38:20
 
 ### 문제 설명
 
@@ -77,6 +77,5 @@
 <ul>
 <li>[0, 0]에서 아래로 다섯 칸 이동한 좌표는 [0, -5]이지만 맵의 세로 크기가 9이므로 아래로는 네 칸을 넘어서 이동할 수 없습니다. 따라서 [0, -4]를 return합니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
