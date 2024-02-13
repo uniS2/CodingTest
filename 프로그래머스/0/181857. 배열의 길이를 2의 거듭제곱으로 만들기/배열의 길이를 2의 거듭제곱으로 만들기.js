@@ -1,10 +1,5 @@
 function solution(arr) {
-    let result = [...arr];
-    let num = 0;
-
-    while(2 ** num < arr.length) num++;
-    for(let i = 0; i < 2 ** num - arr.length; i++){
-        result.push(0);
-    }
-    return result;
+    const log = Math.log2(arr.length);
+    if(log == Math.trunc(log)) return arr;
+    else return [...arr, ...Array(2 ** (Math.trunc(log) + 1) - arr.length).fill(0)];
 }
