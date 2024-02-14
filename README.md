@@ -21,7 +21,7 @@
 
 **📚 코테 [스터디](/studywithNote.md)**
 
-- 백준 페이지의 [단계별로 풀어보기](https://www.acmicpc.net/step) 를 활용하며 풀이를 공유합니다.
+- 백준 페이지의 [단계별로 풀어보기](https://www.acmicpc.net/step) 페이지를 활용하며 풀이를 공유합니다.
 
 <br/>
 
