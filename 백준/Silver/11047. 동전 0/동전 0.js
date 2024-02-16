@@ -1,11 +1,11 @@
-let [index, ...coin] = require('fs').readFileSync('/dev/stdin', 'utf8').trim().split('\n');
-let [N, K] = index.split(' ').map(Number);
+const input = require('fs').readFileSync('/dev/stdin', 'utf8').trim().split('\n');
+let [N, K] = input[0].split(' ').map(Number);
 let result = 0;
 
 while (K) {
-  if (K >= Number(coin[N])) {
-    result += Math.trunc(K / Number(coin[N]));
-    K = K % Number(coin[N]);
+  if (K >= input[N]) {
+    result += Math.trunc(K / input[N]);
+    K %= input[N];
   }
   N--;
 }
