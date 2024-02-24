@@ -1,6 +1,6 @@
-# [level 0] 두 수의 합 - 181846 
+# [level 0] 두 수의 합 - 181846
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181846) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181846)
 
 ### 성능 요약
 
@@ -17,6 +17,16 @@
 ### 제출 일자
 
 2024년 02월 24일 16:24:31
+
+---
+
+### 코드리뷰
+
+✨ 주의
+
+- 우리에게는 자료형이 8가지가 있는데... 그 중에 큰 숫자는 `BigInt`로 지정을 해요 기억합시다 🥲
+
+---
 
 ### 문제 설명
 
@@ -81,6 +91,5 @@
 <ul>
 <li>예제 3번의 <code>a</code>, <code>b</code>는 각각 0, 0이고 0 + 0 = 0입니다. 따라서 "0"을 return 합니다.</li>
 </ul>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
