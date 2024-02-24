@@ -1,2 +1,2 @@
 const input = require('fs').readFileSync('/dev/stdin', 'utf8').trim().split(' ');
-console.log(input.map(v => v ** 2).reduce((a, b) => a + b) % 10);
+console.log(input.reduce((acc, cur) => acc + cur ** 2, 0) % 10)
