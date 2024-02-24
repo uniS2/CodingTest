@@ -1,6 +1,6 @@
-# [level 0] 유한소수 판별하기 - 120878 
+# [level 0] 유한소수 판별하기 - 120878
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120878) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120878)
 
 ### 성능 요약
 
@@ -17,6 +17,61 @@
 ### 제출 일자
 
 2024년 02월 24일 18:03:38
+
+---
+
+### 코드리뷰
+
+#### 나의 풀이
+
+```js
+function solution(a, b) {
+  let max = 0;
+  for (let i = 2; i <= Math.max(a, b); i++) {
+    if (!(a % i) && !(b % i)) max = i;
+  }
+  if (max) b /= max;
+  while (!(b % 2) || !(b % 5)) {
+    if (!(b % 2)) b /= 2;
+    if (!(b % 5)) b /= 5;
+  }
+  return b == 1 ? 1 : 2;
+}
+```
+
+🤔 **나의 풀이**
+
+- 문제에 집중하자! 약수가 아니라 **최대공약수** !!
+
+<br/>
+
+#### 다른 사람 풀이
+
+```js
+function solution(a, b) {
+  let max = 1;
+  for (let i = 2; i <= Math.max(a, b); i++) {
+    if (!(a % i) && !(b % i)) max = i;
+  }
+  b /= max;
+  while (!(b % 2)) b /= 2;
+  while (!(b % 5)) b /= 5;
+  return b == 1 ? 1 : 2;
+}
+```
+
+✅ **비교**
+
+- `while` 반복문 조건을 나누어 해당 조건일 경우만 빠르게 로직 처리를 해줄 수 있다.
+- 성능이 메모리 33.5 MB, 시간 0.21 ms 에서 메모리 33.4 MB, 시간 **0.15 ms** 으로 크게 줄어듦을 확인하였다!
+
+<br/>
+
+#### ✨ 결론
+
+- 반복문 조건은 가능한 간단하게, 해당 케이스만 지정해주자 😀
+
+---
 
 ### 문제 설명
 
@@ -99,6 +154,5 @@
 <hr>
 
 <p>※ 공지 - 2022년 11월 10일 테스트 케이스가 추가되었습니다. 기존에 제출한 코드가 통과하지 못할 수도 있습니다.</p>
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
