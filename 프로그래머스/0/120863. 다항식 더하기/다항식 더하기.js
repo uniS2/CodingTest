@@ -14,5 +14,5 @@ function solution(polynomial) {
     else x = `${x}x`;
     
     if (int) return `${x} + ${int}`;
-    else if (!int) return x;
+    else return x;
 }
