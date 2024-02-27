@@ -1,6 +1,7 @@
 function solution(numlist, n) {
     let result = [];
     const arr = numlist.map(num => Math.abs(num - n));
+    
     [...arr].sort((a, b) => a - b).forEach(i => {
         if((arr.indexOf(i) != arr.lastIndexOf(i))
            && (numlist[arr.indexOf(i)] < numlist[arr.lastIndexOf(i)])){
@@ -11,5 +12,6 @@ function solution(numlist, n) {
             arr.splice(arr.indexOf(i), 1, '');
         }
     });
+    
     return result;
 }
