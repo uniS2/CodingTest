@@ -1,6 +1,5 @@
 function solution(dots) {
     let result = 0;
-    dots.sort();
     dots.forEach((v, i) => {
         for(let index = i; index < 4; index++){
             let cur = [...dots];
