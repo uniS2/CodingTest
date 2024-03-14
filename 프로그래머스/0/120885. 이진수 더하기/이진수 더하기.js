@@ -13,7 +13,7 @@ function solution(bin1, bin2) {
             } else {
                 result[index] = false;
             }
-        } else if (bin1[index] || bin2[index]) {
+        } else {
             if (bin1[index] && bin2[index]){
                 result[index + 1] = true;
             } else if (bin1[index] || bin2[index]) {
