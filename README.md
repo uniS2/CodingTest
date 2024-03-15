@@ -2,13 +2,13 @@
 
 > This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
 
-- 백준, 프로그래머스 사이트를 기준으로 공부하고 있습니다.
+- 백준, 프로그래머스 사이트를 공부하고 있습니다.
 - 일주일에 4일 이상 푸는 것을 목표로 하고 있습니다.
 
 **🔗 사이트별**
 
 - [백준 (JavaScript)](/백준/README.md): 240111 ~ `Silver IV`
-- [프로그래머스 (JavaScript)](/프로그래머스/README.md): 2306?? ~ `0레벨 98%`, `1레벨 40%`. `점수 1500점대`
+- [프로그래머스 (JavaScript)](/프로그래머스/README.md): 2306?? ~ `0레벨 98%`, `1레벨 40%`. `1500점대`
 
 **🔗 정리별**
 
