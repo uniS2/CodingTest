@@ -6,9 +6,7 @@ input = 1000 - input;
 let count = 0;
 
 for (let i = 0; i < unit.length; i++) {
-  if (unit[i] === 1) {
-    count += input;
-  } else if (input >= unit[i]) {
+  if (input >= unit[i]) {
     count += Math.floor(input / unit[i]);
     input = input % unit[i];
   }
