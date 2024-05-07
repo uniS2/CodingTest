@@ -23,4 +23,4 @@ for (let i = 0; i < T; i++) {
   }
 }
 
-return console.log(result);
+return console.log(result.trim());
