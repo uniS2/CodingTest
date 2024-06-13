@@ -5,7 +5,7 @@ function solution(n, array) {
 	for(let i = 1; i < n * n; i += n) {
 		array += new Array(n).fill(i).map((num, index) => num + index).join(' ') + '\n';
 	}
-	console.log(array.trim());
+	return array.trim();
 }
 
 (async () => {
@@ -18,6 +18,6 @@ function solution(n, array) {
 		rl.close();
 	}
 	
-	solution(N, numArray);
+	console.log(solution(N, numArray));
 	process.exit();
 })();
