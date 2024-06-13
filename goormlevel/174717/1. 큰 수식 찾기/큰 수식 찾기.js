@@ -1,30 +1,21 @@
 // Run by Node.js
 const readline = require('readline');
 
-function caculation(expression) {	
-	return eval(expression);
-}
-
-function solution(data) {
-	const calOne = caculation(data[0]);
-	const calTwo = caculation(data[1]);
+function solution(exp) {
+	const calOne = eval(exp[0]);
+	const calTwo = eval(exp[1]);
 	
-	if (calOne >= calTwo) {
-		console.log(calOne);
-	} else {
-		console.log(calTwo);
-	}
+	return Math.max(calOne, calTwo);
 }
 
 (async () => {
 	let rl = readline.createInterface({ input: process.stdin });
-	const data = [];
 	
 	for await (const line of rl) {
-		data.push(...line.split(' '))
+		const exp = line.split(' ');
+		console.log(solution(exp));
 		rl.close();
 	}
-	
-	solution(data);
+
 	process.exit();
 })();
