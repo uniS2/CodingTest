@@ -1,22 +1,24 @@
-// Run by Node.js
 function solution(data) {
 	N = data.shift();
-	M = data[0];
+	M = data.shift();
 	let set = new Set();
+	let min = 0;
 	let i = 0;
 
 	while(true) {
-		i++;
-		if(!set.has(data[i])) set.add(data[i]);
-		
-		if(set.size == N) {
-			console.log(i);
-			break;
-		}
-		if(i == M) {
+		if(i === M) {
 			console.log(-1);
 			break;
 		}
+		
+		if(!set.has(data[i])) set.add(data[i]);
+		
+		if(set.size == N) {
+			console.log(++min);
+			break;
+		}
+		i++;
+		min++;
 	}
 }
 
@@ -31,7 +33,6 @@ const readline = require('readline');
 	
 	for await (const line of rl) {
 		data.push(...line.split(' ').map(Number));
-		rl.close();
 	}
 	
 	solution(data);
