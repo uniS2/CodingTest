@@ -2,16 +2,19 @@ const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin', 'utf8').split('\n').map(i => i.trim());
 
 function guide(data) {
-  const [N, M] = data.shift().split(' ');
-  const list = data.splice(0, N);
-  const map = new Map(list.map((l, i) => [l, i + 1]))
+  const [N, M] = data[0].split(' ').map(Number);
+  let hash = new Map();
   let answer = [];
 
-  for (let i = 0; i < M; i++) {
+  for (let i = 1; i <= N; i++) {
+    hash.set(input[i], i)
+  }
+
+  for (let i = N + 1; i <= N + M; i++) {
     if (Number.isNaN(+data[i])) {
-      answer.push(map.get(data[i]));
+      answer.push(hash.get(data[i]));
     } else {
-      answer.push(list[data[i] - 1]);
+      answer.push(data[data[i]]);
     }
   }
   return answer.join('\n');
