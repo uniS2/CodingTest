@@ -13,7 +13,7 @@ function enter(data) {
       enter_list.delete(data[i][0])
     }
   }
-  return [...enter_list].sort((a, b) => a > b ? -1 : 1).join('\n');
+  return [...enter_list].sort().reverse().join('\n');
 }
 
 console.log(enter(input));
