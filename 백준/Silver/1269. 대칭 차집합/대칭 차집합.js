@@ -10,13 +10,12 @@ function count(input) {
   const A = new Set(data(input.shift()));
   const B = new Set(data(input.shift()));
 
+  let intersection = 0;
+
   for (let a of A) {
-    if (B.has(a)) numA--;
+    if (B.has(a)) intersection++;
   }
-  for (let b of B) {
-    if (A.has(b)) numB--;
-  }
-  return numA + numB;
+  return numA + numB - intersection * 2;
 }
 
 console.log(count(input));
