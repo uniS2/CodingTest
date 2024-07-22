@@ -4,13 +4,13 @@ const input = fs.readFileSync('/dev/stdin', 'utf8').trim();
 function convert(str) {
   let answer = '';
 
-  for (let s of str) {
+  [...str].forEach((s) => {
     if (s.toUpperCase() === s) {
       answer += s.toLowerCase();
     } else {
       answer += s.toUpperCase();
     }
-  }
+  });
   return answer;
 }
 
