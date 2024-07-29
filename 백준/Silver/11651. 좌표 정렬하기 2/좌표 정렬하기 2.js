@@ -1,7 +1,4 @@
-const fs = require('fs');
-const path = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
-
-const input = fs.readFileSync(path, 'utf8').trim().split('\n');
+const input = require('fs').readFileSync('/dev/stdin', 'utf8').trim().split('\n');
 
 function sort(input) {
   input.shift();
