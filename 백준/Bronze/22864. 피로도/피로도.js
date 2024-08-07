@@ -5,7 +5,7 @@ function solution(a, b, c, m) {
   let max_work = 0;
 
   for (let time = 0; time < 24; time++) {
-    if (fatigue < m && fatigue + a <= m) {
+    if (fatigue + a <= m) {
       fatigue += a;
       max_work += b;
     } else {
